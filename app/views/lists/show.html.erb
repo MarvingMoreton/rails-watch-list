@@ -1,10 +1,28 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+
+<h1><%= @list.name %></h1>
+
+
+<%# <%= @list.movies[0].title %>
+
+<ul class="list-cards">
+<% @bookmarks.each do |bookmark|%>
+<li><%= bookmark.movie.title %></li>
+<li><%= bookmark.movie.overview %></li>
+<%= link_to "Delete",
+# Wrong path for bookmark
+  bookmark_path(bookmark),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<% end %>
+</ul>
+
+<%# <%= @list.bookmarks[0].movie.title %>
+
 <%# <%= link_to "Delete",
-    bookmark_path(@bookmark),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<%# Bookmark a movie = "add a movie" %>
-<div>
-  <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-</div>
+  bookmark_path(@list.bookmark),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<%# DELETE THIS LIST %>
+<%= link_to "Delete",
+    list_path(@list),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>

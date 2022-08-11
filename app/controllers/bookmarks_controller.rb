@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
     # raise
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to lists_path(@list), notice: 'Bookmark has been destroyed.'
+    redirect_to lists_path(@bookmark.list), notice: 'Bookmark has been destroyed.'
   end
 
   def create
@@ -36,5 +36,4 @@ class BookmarksController < ApplicationController
   def set_list
     @list = List.find(params[:list_id])
   end
-
 end
