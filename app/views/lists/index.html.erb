@@ -1,9 +1,10 @@
 <H1>All Lists</H1>
 
-<ul>
-<%= @lists.each do |list|%>
-<li>
-<%= list.name %>
-</li>
+<ul class="list-cards">
+<% @lists.each do |list|%>
+<li><%= link_to list.name, list_path(list) %></li>
 <% end %>
 </ul>
+
+<%# Create a movie list %>
+<%= link_to "Create a movie list", new_list_path, :class => "btn btn-outline-success my-2 my-sm-0"%>

@@ -1,2 +1,9 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<h1>Creating a new list</h1>
+
+<%= render "form", list: @List%>
+
+<br>
+<br>
+<div>
+  <%= link_to "Back to lists", lists_path %>
+</div>
