@@ -6,12 +6,10 @@
 
 <ul class="list-cards">
 <% @bookmarks.each do |bookmark|%>
+<%= image_tag bookmark.movie.poster_url, alt: "Le Wagon", width: 200 %>
 <li><%= bookmark.movie.title %></li>
 <li><%= bookmark.movie.overview %></li>
-<%= link_to "Delete",
-# Wrong path for bookmark
-  bookmark_path(bookmark),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
 <% end %>
 </ul>
 
