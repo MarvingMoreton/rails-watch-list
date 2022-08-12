@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
     # raise
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to root_path(@bookmark.list), notice: 'Bookmark has been destroyed.'
+    redirect_to root_path(@bookmark.list), status: :see_other
   end
 
   def create

@@ -21,11 +21,6 @@
 
 
 <%# <%= @list.bookmarks[0].movie.title %>
-
-<%# <%= link_to "Delete",
-  bookmark_path(@list.bookmark),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
 <%# DELETE THIS LIST %>
 <%= link_to "Delete",

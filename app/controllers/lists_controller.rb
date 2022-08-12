@@ -8,7 +8,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find((params[:id]))
+    @list = List.find(params[:id])
     @bookmarks = @list.bookmarks
   end
 
@@ -21,6 +21,12 @@ class ListsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private
