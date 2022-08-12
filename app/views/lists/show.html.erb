@@ -15,6 +15,11 @@
 <% end %>
 </ul>
 
+ <% @list.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+
 <%# <%= @list.bookmarks[0].movie.title %>
 
 <%# <%= link_to "Delete",
