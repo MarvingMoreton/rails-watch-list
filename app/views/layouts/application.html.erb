@@ -14,13 +14,12 @@
   <nav class="navbar navbar-light bg-light justify-content-between">
         <div class="container">
         <%= image_tag 'watchlist-logo.png', width: 40 %>
-        <%= link_to 'My Lists', root_path %>
+        <%= link_to 'My Lists', root_path, :class => "btn btn-light" %>
       </div>
 
-        <%= link_to "Create a list", new_list_path, :class => "btn btn-outline-success my-2 my-sm-0"%>
+        <%= link_to "Create a list", new_list_path, :class => "btn btn-danger my-2 my-sm-0"%>
       </div>
     </nav>
-      <i class="fa-solid fa-popcorn"></i>
     <%= yield %>
   </body>
 </html>

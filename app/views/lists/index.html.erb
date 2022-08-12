@@ -1,29 +1,19 @@
-<%# Create class to contain image background to create a banner %>
-<br>
-<br>
 <div class="hero-image lists-page">
   <div class="container hero-text center-text">
-    <h1>Find movies</h1>
-    <p>LFGGG</p>
-    <button>My list</button>
+    <h1>FIND THA ULTIMATE MOVIEEES</h1>
+    <p>LETS GOOOOOOO</p>
   </div>
 </div>
 
-<H1>All Lists</H1>
-
-<ul class="list-cards">
-<% @lists.each do |list|%>
-  <li>
-  <%= link_to list.name, list_path(list) %>
-  </li>
-
-    <% if list.photos.attached?%>
-      <%list.photos.each do |photo|%>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill%>
-      <%end %>
-    <%end %>
-<% end %>
-</ul>
+<div class="row flex-wrap">
+  <% @lists.each do |list|%>
+    <div class="col-4">
+      <div class="card-category w-75 p-3 mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.photos.first.key %>')">
+        <h2><%= link_to list.name, list_path(list), :class => "text-decoration-none link-light" %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <%# Create a movie list %>
-<%= link_to "Create a movie list", new_list_path, :class => "btn btn-outline-success my-2 my-sm-0"%>
+<%= link_to "Create a movie list", new_list_path, :class => "btn btn-info mt-4" %>
