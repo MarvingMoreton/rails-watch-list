@@ -12,11 +12,15 @@
 
   <body>
   <nav class="navbar navbar-light bg-light justify-content-between">
-      <%= link_to "All lists", lists_path, :class => "navbar-brand" %>
-      <div>
+        <div class="container">
+        <%= image_tag 'watchlist-logo.png', width: 40 %>
+        <%= link_to 'My Lists', root_path %>
+      </div>
+
         <%= link_to "Create a list", new_list_path, :class => "btn btn-outline-success my-2 my-sm-0"%>
       </div>
     </nav>
+      <i class="fa-solid fa-popcorn"></i>
     <%= yield %>
   </body>
 </html>
