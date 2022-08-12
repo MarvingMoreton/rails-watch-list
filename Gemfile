@@ -73,3 +73,5 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
