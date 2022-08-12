@@ -8,7 +8,7 @@
 <div class="row flex-wrap">
   <% @lists.each do |list|%>
     <div class="col-4">
-      <div class="card-category w-75 p-3 mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.photos.first.key %>')">
+      <div class="card-category w-75 p-3 mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= list.photos.attached? ? cl_image_path(list.photos.first.key) : "https://unsplash.com/photos/kJnDiU7pw8g" %>')">
         <h2><%= link_to list.name, list_path(list), :class => "text-decoration-none link-light" %></h2>
       </div>
     </div>
