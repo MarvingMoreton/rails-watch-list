@@ -1,26 +1,50 @@
-/* The hero image */
-.wtv {
-  background-image: url('app/assets/images/movies-background.jpeg');
-}
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (img). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.242), rgba(0, 0, 0, 0.154)),asset-url('movies-background.jpeg');
+// /* The hero image */
+// .hero-image {
+//   /* Use "linear-gradient" to add a darken background effect to the image (img). This will make the text easier to read */
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.242), rgba(0, 0, 0, 0.154)),asset-url('movies-background.jpeg');
 
-  /* Set a specific height */
-  height: 300px;
+//   /* Set a specific height */
+//   height: 300px;
 
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
+//   /* Position and center the image to scale nicely on all screens */
+//   background-position: center;
+//   background-size: cover;
+//   // position: relative;
+// }
+
+// /* Place text in the middle of the image */
+// .hero-text {
+//   text-align: center;
+//   // position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   color: white;
+// }
+
+
+.banner {
   background-size: cover;
-  // position: relative;
+  background-position: center;
+  padding: 150px 0;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.banner h1 {
+  margin: 0;
   color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner h2 {
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.lists-page {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('movies-background.jpeg');
 }

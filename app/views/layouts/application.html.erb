@@ -12,19 +12,13 @@
 
   <body>
 <div class="container full">
-  <nav class="navbar navbar-light bg-light justify-content-between">
+  <nav class="navbar navbar-light bg-light pb-4">
       <div class="container">
         <%= link_to image_tag('watchlist-logo.png', alt: "watchlist", width: 40), root_path%>
-        <%= link_to 'My Lists', root_path, :class => "btn btn-light" %>
-        <%= link_to "Create a list", new_list_path, :class => "btn btn-danger my-2 my-sm-0"%>
+        <H2>WATCHLIST</H2>
+        <%= link_to "Create a list", new_list_path, :class => "btn btn-dark rounded"%>
       </div>
     </nav>
-  <div class="hero-image lists-page">
-  <div class="container hero-text center-text">
-    <h1>FIND THA ULTIMATE MOVIEEES</h1>
-    <p>LETS GOOOOOOO</p>
-  </div>
-</div>
     <%= yield %>
   </div>
   </body>
